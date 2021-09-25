@@ -12,6 +12,8 @@ footer, article, details {
     100%; font-weight: inherit; vertical-align: baseline;
     }
 
+
+
 /* @font-face{
     font-family:"helvetica";
 
@@ -33,11 +35,18 @@ body{
 }
 
 #logo2{
-    position:relative;
-    padding:300px;
-    height:300px;
-    width:400px;
+    position:fixed;
+    transform: translate(-50%, -50%);
+    width:100%;
+    height:auto; 
+    top:50%;
+    left:50%;
+    z-index:6
+}
 
+#menubar{
+    position:relative;
+    
 }
 
 * {
@@ -85,10 +94,13 @@ body{
   }
 
   input[type=text] {
-     width: 30%;
-     -webkit-transition: width 0.15s ease-in-out;
-     transition: width 0.15s ease-in-out;
-  }
+    width: 20%;
+    -webkit-transition: width 0.30s ease-in-out;
+      transition: width 0.30s ease-in-out; 
+      -webkit-transform: scale(3);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
+ }
 
   /* When the input field gets focus,
        change its width to 100% */

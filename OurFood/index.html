@@ -6,28 +6,32 @@
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="shortcut icon" href="images/shellhacks.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <head>
 
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+      </head>
 </head>
 
-<form class="example" action="action_page.php">
+<!-- <form class="example" action="action_page.php">
     <input type="text" placeholder="Search.." name="search">
     <button type="submit"><i class="fa fa-search"></i></button>
-</form>
+</form> -->
 
 <body>
-    <!-- <div id="logo">
+    <div id="logo">
         <img src="images/Logo.png" 
         width="240px" height="200px">
-    </div> -->
+    </div>
     
+
     <div id="logo2">
         <img src="images/OurFood.png">
     </div>
 
     
-
     <div id="menubar">
-
+        
 
 
         
@@ -56,6 +60,48 @@
     <script src="JS/script-main.js"></script>
 
 
+<span class="mdc-evolution-chip-set" role="grid">
+  <span class="mdc-evolution-chip-set__chips" role="presentation">
+    <span class="mdc-evolution-chip" role="row" id="c0">
+      <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
+        <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="0">
+          <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
+          <span class="mdc-evolution-chip__text-label">Chip one</span>
+        </button>
+      </span>
+    </span>
+    <span class="mdc-evolution-chip" role="row" id="c1">
+      <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
+        <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
+          <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
+          <span class="mdc-evolution-chip__text-label">Chip two</span>
+        </button>
+      </span>
+    </span>
+  </span>
+</span>
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<script>document.write(new Date().getFullYear())</script>
 
 </body>
 </html>
