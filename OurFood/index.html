@@ -3,64 +3,57 @@
     <title>
         OurFood
     </title>
+
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="shortcut icon" href="images/shellhacks.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <head>
-
-        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-      </head>
+    
+    <!-- material design -->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    
 </head>
-
-<!-- <form class="example" action="action_page.php">
-    <input type="text" placeholder="Search.." name="search">
-    <button type="submit"><i class="fa fa-search"></i></button>
-</form> -->
-
 <body>
-    <div id="logo">
-        <img src="images/Logo.png" 
-        width="240px" height="200px">
-    </div>
-    
 
-    <div id="logo2">
-        <img src="images/OurFood.png">
-    </div>
-
-    
-    <div id="menubar">
-        
+<!-- linking javascript -->
+<script src="JS/script-main.js"></script>
 
 
-        
-    </div>
+<div id="logo2">
+    <img src="images/OurFood.png">
+</div>
 
 
-    <input id="searchbar" onkeyup="search_animal()" type="text"
-        name="search" placeholder="Search animals..">
+<h1>
+    <div id="about">
+        <a href="about.html">About</a>
+    </div>    
+</h1>
+
+
+<div id="github">
+    <a href="https://github.com/Danni-Qu/ourfood"><img src="images/github.png" width="27px" height="27px"></a>
+</div>
+
+
+<div class="footer">  
+    <!-- @Copyright <a> JavaTpoint </a> 2020- All Right Reserved. -->
+    <img src="images/Logo.png" 
+    width="50px" height="50px">
+</div> 
+
+
+<input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Whatcha cooking today?">
       
-    <!-- ordered list -->
-    <ol id='list'>
-        <li class="animals">Cat</li>
-        <li class="animals">Dog</li>
-        <li class="animals">Elephant</li>
-        <li class="animals">Fish</li>
-        <li class="animals">Gorilla</li>
-        <li class="animals">Monkey</li>
-        <li class="animals">Turtle</li>
-        <li class="animals">Whale</li>
-        <li class="animals">Aligator</li>
-        <li class="animals">Donkey</li>
-        <li class="animals">Horse</li>
-    </ol>
-      
-    <!-- linking javascript -->
-    <script src="JS/script-main.js"></script>
+
+<div id="date">
+    ©   <script>document.write(new Date().getFullYear())</script> OurFood. All rights reserved.
+</div>
 
 
-<span class="mdc-evolution-chip-set" role="grid">
+<!-- material design chips -->
+<!-- <span class="mdc-evolution-chip-set" role="grid">
   <span class="mdc-evolution-chip-set__chips" role="presentation">
     <span class="mdc-evolution-chip" role="row" id="c0">
       <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
@@ -79,29 +72,8 @@
       </span>
     </span>
   </span>
-</span>
+</span> -->
 
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-
-<script>document.write(new Date().getFullYear())</script>
 
 </body>
 </html>
