@@ -13,11 +13,14 @@ font-family: inherit; font-style: inherit; font-size:
 }
 
 
+
+
 body{
     background-color:#e6ffec;
     /* background-color:#C1F7DC; */
     font-family:Arial, Helvetica, sans-serif;
     font-size:20px;
+    
 }
 
 
@@ -154,8 +157,20 @@ a:visited{
     width: 30%;
   }
 
- /* #list{
-   font-size:  1.5em;
-   margin-left: 90px;
-  } */
+.mdc-card{
+    width: 325px; 
+    flex: 0 0 auto;
+    
+}
+
+#scroll-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+}
+
 
