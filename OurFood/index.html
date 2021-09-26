@@ -1,78 +1,78 @@
+   
 <!DOCTYPE html>
 <head>
     <title>
         OurFood
     </title>
-
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="shortcut icon" href="images/shellhacks.jpeg">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='shellhacks.jpeg') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!-- material design -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    
 </head>
+
+<!-- <form class="example" action="action_page.php">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+</form> -->
+
 <body>
+    <style>
+      .example::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+ 
+  
+    <div id="logo2">
+        <img src="/static/OurFood.png">
+    </div>
 
-<!-- linking javascript -->
-<script src="JS/script-main.js"></script>
+    <h1>
+      <div id="about">
+          <a href="about.html">About</a>
+      </div>    
+    </h1>
 
+    <div id="github">
+      <a href="https://github.com/Danni-Qu/ourfood"><img src="static/github.png" width="27px" height="27px"></a>
+    </div>
+  
+    <div id="scroll-wrapper">
+      {% for recipe in recipes %}
+        <div class="mdc-card">
+          <div class="my-card__media mdc-card__media mdc-card__media--16-9" style="background-image: url({{recipe.Image}})"></div>
+          <h1 style="color: black; font-size: 20px; margin-top: 8px; margin-left: 5px; margin-bottom: 3px; font-weight: bold"> {{recipe.Name}}</h1>
+          <h5 style="margin-left: 5px; margin-bottom: 10px; "> Cooking Time: {{ recipe["Cook Time"] }}  mins </h5>
+          <button class="mdc-button mdc-card__action mdc-card__action--button" onclick=Link('{{recipe.Link}}')>
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label"  style="margin-bottom: 10px; margin-top: 10px;"> Link </span>
+          </button>
+        </div>
+      {% endfor %}
+    </div>
 
-<div id="logo2">
-    <img src="images/OurFood.png">
-</div>
+    <div class="footer">  
+      <!-- @Copyright <a> JavaTpoint </a> 2020- All Right Reserved. -->
+    </div>
+    
+    <form>
+      <input id="searchbar" type="text"
+          name="q" placeholder="Whatcha cooking today?">
+    </form>
+    
+    <div id="date">
+        ©   <script>document.write(new Date().getFullYear())</script> OurFood. All rights reserved.
+    </div>
 
-
-<h1>
-    <div id="about">
-        <a href="about.html">About</a>
-    </div>    
-</h1>
-
-
-<div id="github">
-    <a href="https://github.com/Danni-Qu/ourfood"><img src="images/github.png" width="27px" height="27px"></a>
-</div>
-
-
-<div class="footer">  
-    <!-- @Copyright <a> JavaTpoint </a> 2020- All Right Reserved. -->
-    <img src="images/Logo.png" 
-    width="50px" height="50px">
-</div> 
-
-
-<input id="searchbar" onkeyup="search_animal()" type="text"
-        name="search" placeholder="Whatcha cooking today?">
-      
-
-<div id="date">
-    ©   <script>document.write(new Date().getFullYear())</script> OurFood. All rights reserved.
-</div>
-
-
-<!-- material design chips -->
-<!-- <span class="mdc-evolution-chip-set" role="grid">
-  <span class="mdc-evolution-chip-set__chips" role="presentation">
-    <span class="mdc-evolution-chip" role="row" id="c0">
-      <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
-        <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="0">
-          <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
-          <span class="mdc-evolution-chip__text-label">Chip one</span>
-        </button>
-      </span>
-    </span>
-    <span class="mdc-evolution-chip" role="row" id="c1">
-      <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
-        <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
-          <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
-          <span class="mdc-evolution-chip__text-label">Chip two</span>
-        </button>
-      </span>
-    </span>
-  </span>
-</span> -->
+    <script>
+        function Link(link){
+          window.open(link, '_blank');
+        }
+    </script>
 
 
 </body>
