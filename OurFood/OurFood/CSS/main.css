@@ -35,16 +35,6 @@ a:visited{
     text-decoration:none;
 }
 
-#logo2{
-    position:fixed;
-    transform: translate(-50%, -50%);
-    width:auto;
-    height:auto; 
-    top:36%;
-    left:50%;
-    z-index:6
-}
-
 #rights{
     margin-top:15px;
     font-size:18px;
@@ -66,7 +56,7 @@ a:visited{
     z-index:2;
 }
 footer {  
-    position: absolute;    
+    position: fixed;    
     bottom: 1px;    
     height:80px;
     width: 100%;  
@@ -144,19 +134,29 @@ footer {
     background: #f1f1f1;
     border-radius:27px;
   }
+
   
+  #logo2{
+    position:fixed;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    width:auto;
+    height:auto; 
+    top:36%;
+    left:50%;
+    z-index:6
+}
   #searchbar{
     position:fixed;
-    margin-left: 40%;
     padding:15px;
-    margin-top:30%;
+    left:39%;
     border-radius: 27px;
     color:black;
     z-index:5;
   }
 
   input[type=text] {
-    width: 18%;
+    width: 20%;
     -webkit-transition: width 0.30s ease-in-out;
       transition: width 0.30s ease-in-out; 
       -webkit-transform: scale(3);
@@ -174,8 +174,7 @@ footer {
    margin-left: 90px;
   } */
 
-
- div.cursors div {
+  div.cursors div {
     position: absolute;
     top:300px;
     left: 300x;
@@ -184,4 +183,84 @@ footer {
     z-index: 10000;
     pointer-events: none;
     transform: translate(-50%, -450%);
+}
+
+
+section{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.set{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+.set div{
+    position:absolute;
+    display:block;
+}
+.set div:nth-child(1){
+    left:20%;
+    animation: animate 15s linear infinite;
+    overflow:hidden;
+}
+.set div:nth-child(2){
+    left:70%;
+    animation: animate 10s linear infinite;
+}
+.set div:nth-child(3){
+    left:40%;
+    animation: animate 21s linear infinite;
+}
+.set div:nth-child(4){
+    left:15%;
+    animation: animate 5s linear infinite;
+    overflow:hidden;
+}
+.set div:nth-child(5){
+    left:75%;
+    animation: animate 15s linear infinite;
+}
+.set div:nth-child(6){
+    left:50%;
+    animation: animate 25s linear infinite;
+}
+.set div:nth-child(7){
+    left:6%;
+    animation: animate 19s linear infinite;
+}
+.set div:nth-child(8){
+    left:60%;
+    animation: animate 7s linear infinite;
+}
+@keyframes animate{
+    0%
+    {
+        opacity:0;
+        top:-10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10%{
+        opacity:1
+    }
+    20%{
+        transform: translateX(-20px) rotate(45deg);
+    }
+    40%{
+        transform: translateX(-20px) rotate(90deg);
+    }
+    60%{
+        transform: translateX(20px) rotate(135deg);
+    }
+    80%{
+        transform: translateX(-20px) rotate(180deg);
+    }
+    100%
+    {
+        top: 110%;
+        transform: translateX(-20px) rotate(125deg);
+    }
 }
